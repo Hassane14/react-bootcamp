@@ -1,18 +1,19 @@
-import React, {useState } from 'react'
-import { Contact } from '../../models/contact,class';
+import React, { useState } from 'react'
+import { Contacto } from '../../models/contacto,class';
 import ContactoComponent from '../pure/contacto';
 
 const ContactoListComponent = () => {
 
-    const defaultContact = new Contact('nombre ejemplo', 'apellido ejemplo', 'ejemplo@ejemplo.com', true)
+    const defaultContact = new Contacto('nombre ejemplo', 'apellido ejemplo', 'ejemplo@ejemplo.com', true)
 
-    
-    const [conectado, setEstado] = useState(false);
 
-    const cambiarEstado = (id) => {
-        console.log('TODO: Cambiar estado de la persona')
-        setEstado(conectado => !conectado);
+    const [conectado, setConectado] = useState(false);
+
+    function cambiarEstado() {
+        console.log('TODO: Cambiar estado de la persona');
+        setConectado(!conectado);
     };
+
 
     return (
         <div>
@@ -20,11 +21,10 @@ const ContactoListComponent = () => {
                 Datos de la Persona:
             </div>
             <ContactoComponent contacto={defaultContact}></ContactoComponent>
-            <div>
-                <button onClick={cambiarEstado} >
-                    Cambiar estado a En Linea
-                </button>
-            </div>
+            <button onClick={cambiarEstado} >
+                Cambiar estado a En Linea
+            </button>
+
         </div>
     )
 }

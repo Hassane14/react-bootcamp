@@ -14,7 +14,7 @@ const ContactoComponent = ({contacto}) =>{
                 Email: {contacto.email}
             </h3>
             <h5>
-                Contacto: {contacto.conectado ? 'En Línea' : 'No Disponible'}
+                Contacto: {contacto.conectado ? 'No Disponible' : 'En Linea'}
             </h5>
         </div>
     )
