@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import '../../styles/clock.scss';
 
 function Clock(props) {
     const state = {
